@@ -1,71 +1,57 @@
-# mod_1_project_seattle-ds-051319
+# Comparision of machine learning algorithms to detect heart disease using scikit learn and python pandas
 
 Project Description
 
-Business Understanding <br/>
-We work at a real estate brokerage and we want to build a model to predict the sale price of a house.
+Hailing from a healthcare Company. We capture various Electronics Health records (EHR) and various health conditions and Symptoms as a part of the healthcare Delivery. As of now We are only able to achieve the raw Diagnostic report to the customer once we process his samples in the lab. We are not able to do Any value. So, as the Machine learning industry has involved. We would like to go ahead and would like to inform the customer of the potential diseases . So as the Machine learning industry has involved. We would like to go ahead and would like to inform the customer of the potential diseases that he might have based on the previous data we have captured. We can check the condition of the customer and should be able to suggest underlying diseases with certain amount of certainty, that he might have based on the previous data we have captured. We can check the condition of the customer and should be able to suggest underlying diseases with certain amount of certainty.
 
-Data Understanding <br/>
-The King County Assessor releases all of its data on housing stock, assessed values, and sale prices: https://info.kingcounty.gov/assessor/DataDownload/default.aspx
+2.	Scope of Work
 
-Data Preparation <br/>
-Refer to the Pandas data cleaning lesson for a starting point: https://github.com/learn-co-students/pandas3_seattle-ds-051319
+There is a large amount of data for clinical assessment of the patients. These different types of data/conditions must be maintained and considered during the diagnosis evaluation process. A need for proper management to extract and process the data efficiently and effectively exists . This can be done using the machine learning algorithms .
+Data are divided and analysed in the ML classifiers. This paper focus on different machine learning algorithms used in the medical diagnosis and their advantages and disadvantages. But to choose the right Machine teaming Algorithm to detect a disease is an art. The paper aims at comparing different machine learning algorithms to detect a heart disease with initial parameters. 
 
-Modeling <br/>
-Your team (Asim, Colin, and Dale -- all three of you!) will start with linear regression. Another approach, k-Nearest-Neighbors, will be added for the final iteration of the project.
+Once we are able to find the accuracy of all the algoritms we will work on Finetuning the parameters using GridSearchcv and k-fold cross validation to find out the best possible accuracy for the machine learning Algorithms.
 
-Evaluation <br/>
-Models will be evaluated according to MAE (median absolute error) on houses with sale prices between the 5th and 95th percentiles.
+3.	Dataset Description
 
-Deployment <br/>
-Deliverables: <br/>
-The first deliverable is a Python module containing a function named "predict_house_price" that takes in a row of data on a house according to the following specification:
-{'lat': …, 'lng': …, 'n_bedrooms': …, 'sqft': …, 'waterfront': …, }
+The dataset has been derived from 4 different datasets and unwanted columns removed: 
+1.	Cleveland Clinic Foundation: https://data.world/uci/heart-disease/file/cleveland.data.csv
+2.	Hungarian Institute of Cardiology: https://data.world/uci/heart-disease/file/hungarian.data.csv
+3.	V.A. Medical Center, Long Beach: https://data.world/uci/heart-disease/file/long-beach-va.data.csv
+4.	University Hospital,Zurich, Switzerland: https://data.world/uci/heart-disease/file/switzerland.data.csv
 
-The second deliverable is a presentation to the instructors and the 0401 cohort addressing the following questions:
-What problem did you set out to solve? (Business Understanding) <br/>
-What steps were necessary to source the data? (Data Understanding) <br/>
-How did your team prepare the data for ML and engineer features? (Data Prep) <br/>
-How does the model predict the price of a house? (Modeling) <br/>
-How well does the model predict the price of a house? (Evaluation) <br/>
-Can we see a demo of the website integrated with the function? (Deployment: Stay tuned for more information about this)
+4.Features Description
+The table below, summarizes the features information:
+FEATURE	DETAIL
+1.	AGE	The age of patient in years
+2.	GENDER	0 -female, 1 -male
+3.	THE CHEST PAIN TYPE	1: typical angina. 2: atypical Angina.  3: non-anginal pain. 4: asymptomatic
+4.	THE RESTING BLOOD PRESSURE OF PATIENT	In mm Hg calculated when admitted to the hospital
+5.	SERUM CHOLESTEROL	Calculated In mg/dI
+6.	IS FASTING BLOOD SUGAR > 120 MG/DI	0 -false , 1- true
+7.	RESTING ELECTROCARDIOGRAPHIC RESULTS	0: normal. 1: having ST-T wave abnormalities (T-wave inversions &/or ST elevations or depressions > 0.05 mV).  2: showing probable / definite left ventricular hypertrophy by Estes’s criteria
+8.	MAXIMUM HEART RATE ACHIEVED	centered
+9.	HAVING EXERCISE-INDUCED ANGINA	1 - yes; 0 - no
+10.	ST DEPRESSION INDUCED BY EXERCISE RELATIVE TO REST	In mm Hg calculated when admitted to the hospital
+11.	THE NUMBER OF MAJOR VESSELS	(0-3) Color developed by fluoroscopy
+12.	THE SLOPE OF THE PEAK EXERCISE ST-SEGMENT	Value1: upsloping. Value2: flat. Value3: downsloping
+13.	THALLIUM HEART SCAN	3: normal,  6: fixed defect,  7: reversible defect
+14.	HEART DISEASE DIAGNOSIS (CORONARY HEART DISEASE)	Value 0 : disease not present. Value1: heart disease
 
-You should also submit a clean and readable Jupyter notebook with executable code that illustrates how you designed, built, and tested your model. (You may also have "scratch" notebooks that  are for your eyes only.)
 
+4.	Objectives
 
-Schedule:
+Machine learning is a process which learns from past experiences to improve future performances. Aim of this field is to automate learning methodologies. Medical treatments start with screening of patient’s health symptoms, conditional diagnosis, treatment, and frequent monitoring. Precise diagnosis is very important in deciding the right therapy at an early stage. But in multiple cases it is extremely difficult for the experts to identify the level of the patient. With the existing clinical records, the ML methods can be used to produce various descriptive analysis of clinical features. Machine Learning algorithms are being widely used for diagnosis of several diseases like diabetics, heart problems, cancer.
 
-Part I (Fri-Tues): Linear Regression
+There are various machine learning techniques for disease detection:
 
-Use multiple linear regression to build a model that predicts prices based on various house features. It will be up to you to find or engineer predictors that are highly correlated with price!
+1. Supervised Learning: The popular algorithms of Supervise learning are classification and regression. The supervised learning is of two types : the parametric models and the non-parametric models.
+a. In the parametric models, the predictive function is a combination of fixed no of parameters. First stage is the learning stage using the training dataset. After this stage the training data can be discarded as the prediction for new input is based on the learned parameters. Some examples of parametric models are Linear regression and classification ,neural networks.
 
--->Presentation #1 at 5:00 on Tuesday
+b. In nonparametric models, the no of parameters is dependent on the training dataset. The training data set is maintained for the prediction. The most commonly used nonparametric models are support vector machines and nearest neighbour algorithm.
 
-Part II (Wed-Thurs): k-Nearest Neighbors Modeling
+2. Semi supervised learning: This is a combination of the supervised and the unsupervised machine learning techniques. It is an repetitive process where initially the labeled data values are used with supervised learning and next the unlabelled data values are labelled with the previous known values and finally all the data values are used for predicting the outcome. Basically, the semi-supervised learning models can be categorized under four classes: a) generative model b) model where the decision boundary is in low-density region c) graph-based model d) two-step model with unsupervised learning followed by supervised learning.
 
-Learn in the morning from Brian about k-Nearest Neighbors Modeling.
+3. Unsupervised Learning: These algorithms predicts the result based on  similarity in the input Data. Clustering is one of the unsupervised learning used generally. It is the method of grouping the similar data based on their distance. The property of clusters is that there should be a high intra-cluster similarity and a low inter-cluster similarity. The detected clusters depend on the input data values.
 
-Afterward: Try using this modeling strategy on your housing price data. See if you can get a better model!
+4. Deep learning: It is another form of machine learning that has a high-level Abstraction.
 
--->Presentation #2 at 9:00 Thursday morning
-
-Some guiding questions for the project as a whole:
-
-* "how did you decide on the data cleaning options you performed?"
-* "why did you choose a given method or library?"
-* "how did you select your visualizations and what did you learn from each of them?"
-* "why did you pick those features as predictors?"
-* "how would you interpret the results?"
-* "how confident are you in the predictive quality of the results?"
-* "what are some of the things that could cause the results to be wrong?"
-
-The end of module projects and project reviews are a critical part of the program. They give you a chance to both bring together all the skills you've learned into realistic projects and to practice key "business judgement" and communication skills that you otherwise might not get as much practice with.
-The projects are serious and important. They are not graded, but they can be passed and they can be failed. Take the project seriously, put the time in, ask for help from your instructors early and often if you need it.
-Finally, this is your first project! We don't expect you to remember all of the terms or to get all of the answers right. If in doubt, be honest. If you don't know something, say so. If you can't remember it, just say so. Just be as honest, precise and focused as you can be, and you'll do great.
-
-A few suggestions for getting started:
-
-1. Each of you can _fork_ this repo and then clone your fork, so that you can all work locally and separately. Alternatively, use multiple branches.
-2. Unzip and prepare the data; see "data preparation" above.
-3. Look at the Jupyter notebooks in this repo for guidelines about notebook presentation. "V1" is clearly unworthy of a professional audience, while "V2" is an improvement and "V3" is best of all.
-4. Don't think of the goal as producing one perfect model. Aim to produce a (bad) model by the end of the first day; you can always improve on it.
