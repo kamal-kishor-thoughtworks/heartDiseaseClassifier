@@ -1,5 +1,11 @@
 # Comparision of machine learning algorithms to detect heart disease using scikit learn and python pandas
 
+main project is in FinalProject.ipynb
+dataset is aggregated in heart_disease_all15.csv
+output of the project can be seen in FinalProject.html
+
+
+
 Project Description
 
 Hailing from a healthcare Company. We capture various Electronics Health records (EHR) and various health conditions and Symptoms as a part of the healthcare Delivery. As of now We are only able to achieve the raw Diagnostic report to the customer once we process his samples in the lab. We are not able to do Any value. So, as the Machine learning industry has involved. We would like to go ahead and would like to inform the customer of the potential diseases . So as the Machine learning industry has involved. We would like to go ahead and would like to inform the customer of the potential diseases that he might have based on the previous data we have captured. We can check the condition of the customer and should be able to suggest underlying diseases with certain amount of certainty, that he might have based on the previous data we have captured. We can check the condition of the customer and should be able to suggest underlying diseases with certain amount of certainty.
